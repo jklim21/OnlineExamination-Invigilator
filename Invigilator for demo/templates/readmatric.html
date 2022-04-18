@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block title %}Home{% endblock %} {% block content%}
+<body>
+    <div id="layoutSidenav_content" style="position:absolute; left: 500px; top:100px;">
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Retreive Matric Card</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">Click to download students' Matric card</li>
+            </ol>
+            <form method="post" action="{{url_for('afterreadmatric')}}">
+                <div class="form-floating mb-3">
+                    <input class="form-control" name="studentID" id="studentID" type="text" placeholder="Enter studentID to retreive Matric Card"  />
+                    <label for="studentID">Enter studentID</label>
+                    <br>
+                    <input type="submit" value="Retrieve courseID">
+                </div>
+                <br><br>
+                
+                <img src="\static\assets\img\matric.jpg" alt="Matric" style="width:500px;height:300px;">
+                <p>sample of matric card</p>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+{% endblock %}

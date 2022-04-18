@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block title %}Home{% endblock %} {% block content%}
+<div id="layoutSidenav_content" style="position:absolute; left: 500px; top:100px;">
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Waiting room for Examinations</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Pre Examination Steps</li>
+        </ol>
+        <ol>
+            <li>Ensure Matric Cards checked</li><br>
+            <li>Ensure Web Camera and Microphone functioning</li><br>
+            <li>Ensure you indicate your full name (Eg. Prof Chua Hock Chuan)</li><br>
+            <li>Ensure students indicate their full name (Eg. Lim Jun Kai)</li><br>
+            <li>Share One-Time-Link with students</li><br>
+            <li>Once Examination is finished, click BACK button</li><br><br>
+            
+            <form action="{{url_for('video')}}">
+                <input type="submit" value="Proceed with Video Portal" />
+            </form>
+
+            <br><br>
+            <li>Proceed with Step 3</li>
+        </ol>
+        
+
+        
+
+{% endblock %}
+
+        

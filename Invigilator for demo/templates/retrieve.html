@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {% block title %}Home{% endblock %} {% block content%}
+<body>
+    <div id="layoutSidenav_content" style="position:absolute; left: 500px; top:100px;">
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Retreive Scripts</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">Click to download students' scripts</li>
+            </ol>
+            <form method="post" action="{{url_for('retrievedscript')}}">
+                <div class="form-floating mb-3">
+                    <input class="form-control" name="examID" id="examID" type="text" placeholder="Enter examID to retreive"  />
+                    <label for="examID">Enter examID</label>
+                    <br>
+                    <input type="submit" value="Retrieve script">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+    
+
+
+{% endblock %}
